@@ -1,0 +1,76 @@
+{
+  "cards": [
+    {
+      "points3": 1,
+      "points4": 2,
+      "points5": 3,
+      "rule": "This is an example rule for 1/2/3"
+    },
+    {
+      "points3": 1,
+      "points4": 2,
+      "points5": 3,
+      "rule": "This is an second example rule for 1/2/3"
+    },
+    {
+      "points3": 1,
+      "points4": 2,
+      "points5": 3,
+      "rule": "This is an third example rule for 1/2/3"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "This is an example rule for 2/2/2"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "This is an second example rule for 2/2/2"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "This is an third example rule for 2/2/2"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is an example rule for 1/1/1"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is a second example rule for 1/1/1"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is a third example rule for 1/1/1"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is a fourth example rule for 1/1/1"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is a fifth example rule for 1/1/1"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "This is a sixth example rule for 1/1/1"
+    }
+  ]
+}
