@@ -1,12 +1,9 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
 }
 
-group = "com.seanproctor"
+group = "com.seanproctor.crew"
 version = "1.0-SNAPSHOT"
 
 

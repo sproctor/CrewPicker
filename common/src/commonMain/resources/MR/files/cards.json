@@ -2,21 +2,21 @@
   "cards": [
     {
       "points3": 1,
-      "points4": 2,
+      "points4": 1,
+      "points5": 1,
+      "rule": "I will win pink 3"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
       "points5": 3,
-      "rule": "This is an example rule for 1/2/3"
+      "rule": "I will win exactly 2 tricks and they will be in a row"
     },
     {
       "points3": 1,
       "points4": 2,
-      "points5": 3,
-      "rule": "This is an second example rule for 1/2/3"
-    },
-    {
-      "points3": 1,
-      "points4": 2,
-      "points5": 3,
-      "rule": "This is an third example rule for 1/2/3"
+      "points5": 2,
+      "rule": "I will win none of the first 3 tricks"
     },
     {
       "points3": 2,
@@ -37,22 +37,22 @@
       "rule": "This is an third example rule for 2/2/2"
     },
     {
-      "points3": 1,
-      "points4": 1,
-      "points5": 1,
-      "rule": "This is an example rule for 1/1/1"
+      "points3": 2,
+      "points4": 4,
+      "points5": 5,
+      "rule": "I will win a trick that contains only odd-numbered cards"
     },
     {
-      "points3": 1,
-      "points4": 1,
-      "points5": 1,
-      "rule": "This is a second example rule for 1/1/1"
+      "points3": 4,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win only the first trick"
     },
     {
-      "points3": 1,
-      "points4": 1,
-      "points5": 1,
-      "rule": "This is a third example rule for 1/1/1"
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win as many pink as blue cards in one trick"
     },
     {
       "points3": 1,

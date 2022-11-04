@@ -6,7 +6,7 @@ plugins {
     id("dev.icerock.mobile.multiplatform-resources") version("0.20.1")
 }
 
-group = "com.seanproctor"
+group = "com.seanproctor.crew"
 version = "1.0-SNAPSHOT"
 
 kotlin {
