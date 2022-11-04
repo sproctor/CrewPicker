@@ -1,0 +1,14 @@
+{
+  "missions": [
+    {
+      "number": 1,
+      "rules": null,
+      "points": 1
+    },
+    {
+      "number": 6,
+      "rules": "Decide together which crew member will assume all tasks, but don't reveal anything about the cards in your hands.",
+      "points": 5
+    }
+  ]
+}
