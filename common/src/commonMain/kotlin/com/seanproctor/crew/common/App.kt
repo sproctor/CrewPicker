@@ -7,6 +7,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.seanproctor.crew.common.components.SegmentedButton
 import com.seanproctor.crew.common.data.CardRepository
 import com.seanproctor.crew.common.data.getPoints
 import com.seanproctor.crew.common.models.Card
@@ -23,24 +24,10 @@ fun App(cardRepository: CardRepository) {
         var pointsText by remember { mutableStateOf("1") }
 
         Row {
-            TextField(
-                value = players.toString(),
-                readOnly = true,
-                onValueChange = {}
-            )
-            Spacer(Modifier.width(8.dp))
-            IconButton(
-                onClick = { if (players > 3) players -= 1 },
-                enabled = players > 3
+            SegmentedButton(
+                items = (3..5).map { "Players: $it" }
             ) {
-                Text("-")
-            }
-            Spacer(Modifier.width(8.dp))
-            IconButton(
-                onClick = { if (players < 5) players += 1 },
-                enabled = players < 5
-            ) {
-                Text("+")
+                players = 3 + it
             }
         }
         Spacer(Modifier.height(8.dp))
@@ -68,9 +55,10 @@ fun App(cardRepository: CardRepository) {
         if (cards != null) {
             LazyColumn {
                 items(cards) { card ->
-                    Card {
-                        Column {
+                    Card(Modifier.padding(8.dp)) {
+                        Column(Modifier.padding(16.dp)) {
                             Text("Points: ${card.getPoints(playersForDraw)}")
+                            Spacer(Modifier.height(8.dp))
                             Text("Rule: ${card.rule}")
                         }
                     }
