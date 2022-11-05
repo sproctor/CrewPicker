@@ -20,24 +20,6 @@
     },
     {
       "points3": 2,
-      "points4": 2,
-      "points5": 2,
-      "rule": "This is an example rule for 2/2/2"
-    },
-    {
-      "points3": 2,
-      "points4": 2,
-      "points5": 2,
-      "rule": "This is an second example rule for 2/2/2"
-    },
-    {
-      "points3": 2,
-      "points4": 2,
-      "points5": 2,
-      "rule": "This is an third example rule for 2/2/2"
-    },
-    {
-      "points3": 2,
       "points4": 4,
       "points5": 5,
       "rule": "I will win a trick that contains only odd-numbered cards"
@@ -55,22 +37,232 @@
       "rule": "I will win as many pink as blue cards in one trick"
     },
     {
-      "points3": 1,
-      "points4": 1,
-      "points5": 1,
-      "rule": "This is a fourth example rule for 1/1/1"
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win no yellow"
     },
     {
       "points3": 1,
       "points4": 1,
       "points5": 1,
-      "rule": "This is a fifth example rule for 1/1/1"
+      "rule": "I will win no 9"
     },
     {
       "points3": 1,
       "points4": 1,
       "points5": 1,
-      "rule": "This is a sixth example rule for 1/1/1"
+      "rule": "I will win no submarine"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win no 1, 2, or 3"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win at least 2x 7"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 5,
+      "rule": "I will win more tricks than everyone else combined"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win no pink"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
+      "points5": 4,
+      "rule": "I will win exactly 3 tricks and they will be in a row"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 5,
+      "rule": "I will win a trick using a 3"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win a trick of which the card values are all less than 7 (Submarines are not allowed in the trick)"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win green 3, yellow 4, and yellow 5"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
+      "points5": 4,
+      "rule": "I will win exactly 1x pink"
+    },
+    {
+      "points3": 4,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win as many pink as yellow cards"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 4,
+      "rule": "I will win a trick using a 5"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win at least 3x 9"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
+      "points5": 4,
+      "rule": "I will win a trick with a total value less than: 8 (3 players), 12 (4 players), 16 (5 players) (Submarines are not allowed in the trick)"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win exactly 3x submarines (If submarine cards 1,2,3,4 are in one hand, re-deal the playing cards)"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win a trick using a 6"
+    },
+    {
+      "points3": 3,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win submarine 2 and no other submarine (If submarine cards 2 and 4 or 1,2,3 are in one hand, re-deal the playing cards)"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 3,
+      "rule": "I will win pink 8, blue 5"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win at least 5x pink"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 4,
+      "rule": "I will win a 6 with another 6"
+    },
+    {
+      "points3": 4,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will not open a trick with yellow or pink or blue"
+    },
+    {
+      "points3": 1,
+      "points4": 2,
+      "points5": 3,
+      "rule": "I will win none of the first 4 tricks"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 5,
+      "rule": "I will win a trick using a 2"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win exactly 2 tricks"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win pink 9 and yellow 8"
+    },
+    {
+      "points3": 3,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win exactly 1 trick"
+    },
+    {
+      "points3": 2,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win pink 1 and green 7"
+    },
+    {
+      "points3": 3,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win X tricks (Note your prediction and share it with the crew)"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win exactly 2x green"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win yellow 9 and blue 7"
+    },
+    {
+      "points3": 1,
+      "points4": 1,
+      "points5": 1,
+      "rule": "I will win 2 tricks in a row"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 4,
+      "rule": "I will win the first and the last trick"
+    },
+    {
+      "points3": 4,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win 0 tricks"
+    },
+    {
+      "points3": 3,
+      "points4": 4,
+      "points5": 5,
+      "rule": "I will win green 2 in the final trick of the game"
+    },
+    {
+      "points3": 1,
+      "points4": 2,
+      "points5": 2,
+      "rule": "I will win no 5"
+    },
+    {
+      "points3": 2,
+      "points4": 3,
+      "points5": 3,
+      "rule": "I will win more tricks than anyone else"
     }
   ]
 }
