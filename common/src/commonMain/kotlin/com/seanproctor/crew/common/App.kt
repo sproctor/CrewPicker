@@ -27,7 +27,7 @@ fun App(cardRepository: CardRepository) {
 
         Row {
             SegmentedButton(
-                items = (3..5).map { "Players: $it" }
+                items = (3..5).map { "$it players" }
             ) {
                 players = 3 + it
             }
