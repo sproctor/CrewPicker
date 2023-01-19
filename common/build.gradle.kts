@@ -18,7 +18,6 @@ kotlin {
     }
     js("web", IR) {
         browser()
-        binaries.executable()
     }
 
     sourceSets {
@@ -66,11 +65,10 @@ android {
     compileSdk = 33
     defaultConfig {
         minSdk = 24
-        targetSdk = 33
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     sourceSets.getByName("main") {
         assets.srcDir(File(buildDir, "generated/moko/androidMain/assets"))

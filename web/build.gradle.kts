@@ -11,7 +11,6 @@ version = "1.0-SNAPSHOT"
 kotlin {
     js(IR) {
         browser()
-        binaries.executable()
     }
     sourceSets {
         val commonMain by getting {
@@ -25,7 +24,9 @@ kotlin {
                 implementation(compose.web.core)
             }
         }
-        val jsTest by getting
+        val jsTest by getting {
+
+        }
     }
 }
 
