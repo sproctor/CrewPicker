@@ -19,20 +19,21 @@ import kotlinx.coroutines.launch
 fun App(cardRepository: CardRepository) {
     val scope = rememberCoroutineScope()
 
-    Column(Modifier.padding(16.dp)) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
         var players by remember { mutableStateOf(3) }
         var playersForDraw by remember { mutableStateOf(3) }
         val cardsState = remember { mutableStateOf<List<Card>?>(null) }
         var pointsText by remember { mutableStateOf("1") }
 
-        Row {
-            SegmentedButton(
-                items = (3..5).map { "$it players" }
-            ) {
-                players = 3 + it
-            }
+        SegmentedButton(
+            items = (3..5).map { "$it players" }
+        ) {
+            players = 3 + it
         }
-        Spacer(Modifier.height(8.dp))
+
         TextField(
             value = pointsText,
             onValueChange = {
@@ -40,7 +41,7 @@ fun App(cardRepository: CardRepository) {
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
-        Spacer(Modifier.height(8.dp))
+
         val points = pointsText.toIntOrNull()
         Button(
             onClick = {

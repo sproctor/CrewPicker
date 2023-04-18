@@ -11,6 +11,7 @@ version = "1.0-SNAPSHOT"
 kotlin {
     js(IR) {
         browser()
+        binaries.executable()
     }
     sourceSets {
         val commonMain by getting {

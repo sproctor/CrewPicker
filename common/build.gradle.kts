@@ -11,11 +11,7 @@ version = "1.0-SNAPSHOT"
 
 kotlin {
     android()
-    jvm("desktop") {
-        compilations.all {
-            kotlinOptions.jvmTarget = "11"
-        }
-    }
+    jvm("desktop")
     js("web", IR) {
         browser()
     }
@@ -42,7 +38,7 @@ kotlin {
                 implementation("dev.icerock.moko:resources-compose:0.20.1")
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependencies {
                 implementation(libs.junit)
             }
@@ -58,6 +54,8 @@ kotlin {
             }
         }
     }
+
+    jvmToolchain(11)
 }
 
 android {
