@@ -4,26 +4,24 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
 }
 
-group "com.seanproctor"
-version "1.0-SNAPSHOT"
-
 dependencies {
     implementation(project(":common"))
     implementation(libs.activity.compose)
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     compileSdk = 34
+    namespace = "com.seanproctor.crewpicker.android"
     defaultConfig {
-        applicationId = "com.seanproctor.android"
+        applicationId = "com.seanproctor.crewpicker.android"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0-SNAPSHOT"
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
     buildTypes {
         getByName("release") {

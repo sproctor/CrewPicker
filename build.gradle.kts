@@ -17,3 +17,7 @@ plugins {
     alias(libs.plugins.compose.multiplatform) apply false
     alias(libs.plugins.moko.resources) apply false
 }
+
+tasks.wrapper {
+    gradleVersion = "8.5"
+}
