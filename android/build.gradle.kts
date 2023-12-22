@@ -1,7 +1,7 @@
 plugins {
-    id("org.jetbrains.compose")
-    id("com.android.application")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.multiplatform)
 }
 
 group "com.seanproctor"
@@ -13,17 +13,17 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(33)
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.seanproctor.android"
-        minSdkVersion(24)
-        targetSdkVersion(33)
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0-SNAPSHOT"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     buildTypes {
         getByName("release") {

@@ -1,17 +1,29 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
-    kotlin("jvm")
-    id("org.jetbrains.compose")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose.multiplatform)
 }
 
 group = "com.seanproctor"
 version = "1.0-SNAPSHOT"
 
-dependencies {
-    implementation(project(":common"))
-    implementation(compose.desktop.currentOs)
-    implementation(KotlinX.coroutines.core)
+kotlin {
+    jvm()
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(project(":common"))
+                implementation(libs.kotlinx.coroutines.core)
+            }
+        }
+
+        val jvmMain by getting {
+            dependencies {
+                implementation(compose.desktop.currentOs)
+            }
+        }
+    }
 }
 
 compose.desktop {

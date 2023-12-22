@@ -1,9 +1,9 @@
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
-    id("com.android.library")
-    kotlin("plugin.serialization")
-    id("dev.icerock.mobile.multiplatform-resources") version("0.20.1")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.moko.resources)
 }
 
 group = "com.seanproctor.crew"
@@ -22,8 +22,8 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
-                implementation("dev.icerock.moko:resources:0.20.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+                implementation(libs.moko.resources)
+                implementation(libs.kotlinx.serialization.json)
             }
         }
         val commonTest by getting {
@@ -33,9 +33,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api(libs.appcompat)
-                api(libs.core.ktx)
-                implementation("dev.icerock.moko:resources-compose:0.20.1")
+                implementation(libs.moko.resources.compose)
             }
         }
         val androidUnitTest by getting {
@@ -60,7 +58,7 @@ kotlin {
 
 android {
     namespace = "com.seanproctor.crew.common"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         minSdk = 24
     }

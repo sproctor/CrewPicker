@@ -16,17 +16,13 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("dev.icerock.moko:resources:0.20.1")
+                implementation(project(":common"))
+                implementation(libs.moko.resources)
             }
         }
         val jsMain by getting {
             dependencies {
-                implementation(project(":common"))
-                implementation(compose.web.core)
             }
-        }
-        val jsTest by getting {
-
         }
     }
 }
