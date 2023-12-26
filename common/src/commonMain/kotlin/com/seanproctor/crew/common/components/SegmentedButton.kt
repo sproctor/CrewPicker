@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,7 +35,7 @@ fun SegmentedButton(
     defaultSelectedItemIndex: Int = 0,
     itemWidth: Dp? = null,
     cornerRadius: Int = 50,
-    color: Color = MaterialTheme.colors.primary,
+    color: Color = MaterialTheme.colorScheme.primary,
     onItemSelection: (selectedItemIndex: Int) -> Unit
 ) {
     check(defaultSelectedItemIndex < items.size)
@@ -103,7 +103,7 @@ fun SegmentedButton(
                      * selected colors
                      */
                     ButtonDefaults.outlinedButtonColors(
-                        backgroundColor = color
+                        containerColor = color
                     )
                 } else {
                     /**
@@ -112,7 +112,7 @@ fun SegmentedButton(
                     /**
                      * not selected colors
                      */
-                    ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent)
+                    ButtonDefaults.outlinedButtonColors(containerColor = Color.Transparent)
                 },
             ) {
                 Text(

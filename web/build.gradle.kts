@@ -21,6 +21,7 @@ kotlin {
             }
         }
         val jsMain by getting {
+            dependsOn(commonMain)
             dependencies {
             }
         }

@@ -19,9 +19,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material)
+//                api(compose.runtime)
+//                api(compose.foundation)
+                api(compose.material3)
                 implementation(libs.moko.resources)
                 implementation(libs.kotlinx.serialization.json)
             }
