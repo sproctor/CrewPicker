@@ -1,14 +1,3 @@
-group "com.seanproctor"
-version "1.0-SNAPSHOT"
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-    }
-}
-
 plugins {
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.kotlin.android) apply false
@@ -19,5 +8,5 @@ plugins {
 }
 
 tasks.wrapper {
-    gradleVersion = "8.5"
+    gradleVersion = "8.6"
 }

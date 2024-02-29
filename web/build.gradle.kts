@@ -32,6 +32,6 @@ compose.experimental {
     web.application {}
 }
 
-multiplatformResources {
-    multiplatformResourcesPackage = "com.seanproctor.crew"
-}
+//multiplatformResources {
+//    multiplatformResourcesPackage = "com.seanproctor.crew"
+//}

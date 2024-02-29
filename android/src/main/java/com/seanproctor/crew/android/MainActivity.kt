@@ -3,7 +3,6 @@ package com.seanproctor.crew.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
 import com.seanproctor.crew.common.App
 import com.seanproctor.crew.common.data.AndroidResourceReader
 import com.seanproctor.crew.common.data.CardDataSource
@@ -17,9 +16,7 @@ class MainActivity : ComponentActivity() {
         val cardDataSource = CardDataSource(resourceReader)
         val cardRepository = CardRepository(cardDataSource)
         setContent {
-            MaterialTheme {
-                App(cardRepository)
-            }
+            App(cardRepository)
         }
     }
 }
