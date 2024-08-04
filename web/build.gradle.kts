@@ -1,7 +1,8 @@
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
-    id("dev.icerock.mobile.multiplatform-resources")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.moko.resources)
 }
 
 group = "com.seanproctor.crew"
@@ -9,29 +10,25 @@ version = "1.0-SNAPSHOT"
 
 
 kotlin {
-    js(IR) {
+    js {
         browser()
         binaries.executable()
     }
     sourceSets {
-        val commonMain by getting {
+//        val commonMain by getting {
+//            dependencies {
+//                implementation(project(":common"))
+//                implementation(libs.moko.resources)
+//            }
+//        }
+        val jsMain by getting {
+//            dependsOn(commonMain)
             dependencies {
                 implementation(project(":common"))
+                implementation(compose.ui)
+                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.moko.resources)
-            }
-        }
-        val jsMain by getting {
-            dependsOn(commonMain)
-            dependencies {
             }
         }
     }
 }
-
-compose.experimental {
-    web.application {}
-}
-
-//multiplatformResources {
-//    multiplatformResourcesPackage = "com.seanproctor.crew"
-//}

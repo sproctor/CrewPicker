@@ -10,7 +10,7 @@ class WebResourceReader(
 ) : ResourceReader {
     override suspend fun readText(): String {
         return withContext(dispatcher) {
-            MR.files.cards.getText()
+            MR.files.cards_json.getText()
         }
     }
 }
