@@ -13,6 +13,8 @@ pluginManagement {
 ////                                # available:"0.60.1"
 ////                                # available:"0.60.2"
 ////                                # available:"0.60.3"
+////                                # available:"0.60.4"
+////                                # available:"0.60.5"
     }
 }
 
