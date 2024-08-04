@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        mavenLocal()
         google()
         gradlePluginPortal()
         mavenCentral()
@@ -8,18 +9,27 @@ pluginManagement {
 
     plugins {
         // See https://jmfayard.github.io/refreshVersions
-        id("de.fayard.refreshVersions") version "0.51.0"
-////                                # available:"0.60.0"
-////                                # available:"0.60.1"
-////                                # available:"0.60.2"
-////                                # available:"0.60.3"
-////                                # available:"0.60.4"
-////                                # available:"0.60.5"
+        id("de.fayard.refreshVersions") version "0.60.5"
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        mavenLocal()
     }
 }
 
 plugins {
     id("de.fayard.refreshVersions")
+}
+
+// work-around https://github.com/Splitties/refreshVersions/issues/640
+refreshVersions {
+    file("build/tmp/refreshVersions").mkdirs()
+    versionsPropertiesFile = file("build/tmp/refreshVersions/versions.properties")
 }
 
 rootProject.name = "crew"

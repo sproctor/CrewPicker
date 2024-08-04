@@ -12,46 +12,23 @@ version = "1.0-SNAPSHOT"
 kotlin {
     androidTarget()
     jvm("desktop")
-    js("web", IR) {
+    js("web") {
         browser()
     }
 
     sourceSets {
         val commonMain by getting {
             dependencies {
-//                api(compose.runtime)
-//                api(compose.foundation)
-                api(compose.material3)
+                api(compose.runtime)
+                implementation(compose.material3)
                 implementation(libs.moko.resources)
                 implementation(libs.kotlinx.serialization.json)
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
-        val androidMain by getting {
-            dependsOn(commonMain) // workaround moko bug
-            dependencies {
                 implementation(libs.moko.resources.compose)
             }
         }
-        val androidUnitTest by getting {
-            dependencies {
-                implementation(libs.junit)
-            }
-        }
         val desktopMain by getting {
-            dependsOn(commonMain) // workaround moko bug
             dependencies {
                 api(compose.preview)
-            }
-        }
-        val desktopTest by getting
-        val webMain by getting {
-            dependsOn(commonMain) // workaround moko bug
-            dependencies {
             }
         }
     }
@@ -68,5 +45,5 @@ android {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "com.seanproctor.crew.common"
+    resourcesPackage = "com.seanproctor.crew.common"
 }
