@@ -11,7 +11,7 @@ class AndroidResourceReader(
 ) : ResourceReader {
     override suspend fun readText(): String {
         return withContext(dispatcher) {
-            MR.files.cards.readText(context)
+            MR.files.cards_json.readText(context)
         }
     }
 }

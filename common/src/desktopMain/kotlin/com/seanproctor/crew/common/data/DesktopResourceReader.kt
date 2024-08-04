@@ -9,7 +9,7 @@ class DesktopResourceReader(
 ) : ResourceReader {
     override suspend fun readText(): String {
         return withContext(dispatcher) {
-            MR.files.cards.readText()
+            MR.files.cards_json.readText()
         }
     }
 }

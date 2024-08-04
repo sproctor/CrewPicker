@@ -83,4 +83,4 @@ app/release/*
 .idea/assetWizardSettings.xml
 .idea/aws.xml
 **/moko-resources-generated.js
-*/.kotlin
+**/.kotlin
