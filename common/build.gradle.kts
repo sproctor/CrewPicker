@@ -1,10 +1,11 @@
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.moko.resources)
 }
 
 group = "com.seanproctor.crew"
@@ -12,24 +13,20 @@ version = "1.0-SNAPSHOT"
 
 kotlin {
     androidTarget()
-    jvm("desktop")
-    js("web") {
+    jvm()
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
         browser()
     }
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 api(compose.runtime)
                 implementation(compose.material3)
-                implementation(libs.moko.resources)
+                implementation(compose.components.resources)
                 implementation(libs.kotlinx.serialization.json)
-                implementation(libs.moko.resources.compose)
-            }
-        }
-        val desktopMain by getting {
-            dependencies {
-                api(compose.preview)
+                implementation(compose.components.uiToolingPreview)
             }
         }
     }
@@ -39,12 +36,12 @@ kotlin {
 
 android {
     namespace = "com.seanproctor.crew.common"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         minSdk = 24
     }
 }
 
-multiplatformResources {
-    resourcesPackage = "com.seanproctor.crew.common"
-}
+//multiplatformResources {
+//    resourcesPackage = "com.seanproctor.crew.common"
+//}

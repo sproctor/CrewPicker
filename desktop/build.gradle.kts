@@ -12,13 +12,6 @@ version = "1.0-SNAPSHOT"
 kotlin {
     jvm()
     sourceSets {
-//        val commonMain by getting {
-//            dependencies {
-//                implementation(project(":common"))
-//                implementation(libs.kotlinx.coroutines.core)
-//            }
-//        }
-
         val jvmMain by getting {
             dependencies {
                 implementation(project(":common"))

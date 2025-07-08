@@ -15,12 +15,12 @@ kotlin {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
     namespace = "com.seanproctor.crewpicker.android"
     defaultConfig {
         applicationId = "com.seanproctor.crewpicker.android"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0-SNAPSHOT"
     }
